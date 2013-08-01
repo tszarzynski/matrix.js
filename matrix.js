@@ -77,14 +77,14 @@
 
 
   Matrix.prototype.invert = function() {
-    var a: Number = this.a;
-    var b: Number = this.b;
-    var c: Number = this.c;
-    var d: Number = this.d;
-    var tx: Number = this.tx;
-    var ty: Number = this.ty;
+    var a = this.a;
+    var b = this.b;
+    var c = this.c;
+    var d = this.d;
+    var tx = this.tx;
+    var ty = this.ty;
 
-    var det: Number = a * d - c * b;
+    var det = a * d - c * b;
 
     this.a = d / det;
     this.b = -b / det;
@@ -101,14 +101,14 @@
   Matrix.prototype.rotate = function(angle) {
 
     if (angle != 0) {
-      var cos: Number = Math.cos(angle);
-      var sin: Number = Math.sin(angle);
-      var a: Number = this.a;
-      var b: Number = this.b;
-      var c: Number = this.c;
-      var d: Number = this.d;
-      var tx: Number = this.tx;
-      var ty: Number = this.ty;
+      var cos = Math.cos(angle);
+      var sin = Math.sin(angle);
+      var a = this.a;
+      var b = this.b;
+      var c = this.c;
+      var d = this.d;
+      var tx = this.tx;
+      var ty = this.ty;
       this.a = a * cos - b * sin;
       this.b = a * sin + b * cos;
       this.c = c * cos - d * sin;
@@ -157,7 +157,7 @@
    * @param dx The amount of movement along the <i>x</i> axis to the right, in pixels.
    * @param dy The amount of movement down along the <i>y</i> axis, in pixels.
    */
-  Matrix.prototype.translate = function(dx, dy): void {
+  Matrix.prototype.translate = function(dx, dy) {
 
     tx += dx;
     ty += dy;
